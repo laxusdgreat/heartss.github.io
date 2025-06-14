@@ -113,29 +113,25 @@
     <div id="bubbles-text"></div>
     <script>
         const messages = [
-            "You inspire me every day 🌟",
-            "Your strength and wisdom amaze me 💫",
-            "I admire your passion and determination 🔥",
-            "You make the world a better place with your kindness 🌍",
-            "Your creativity and brilliance leave me speechless ✨",
-            "I respect your journey and everything you've accomplished 🙌",
-            "You're a true example of grace and perseverance 💪",
-            "Your positivity is contagious, and it's a gift to be around you 😊",
-            "You have a heart of gold, and it shines so brightly ✨",
-            "You are a constant source of motivation and hope 💖"
+            "You inspire me 🌟",
+            "You're strong and wise 🧠",
+            "You're kind and it shows 🌸",
+            "You're smart and creative 💡",
+            "I respect all you've done ✨",
+            "You're calm and resilient 🌿",
+            "You lift everyone's mood",
+            "You're truly kind 😊",
+            "You give me hope ✨",
+            "I appreciate you so much 💖"
         ];
 
-        // Function to create and show a new bubble with one full message at a time
         function createTextBubble() {
-            // Pick a random message from the array
             const randomMessage = messages[Math.floor(Math.random() * messages.length)];
 
-            // Create a new text bubble with the selected message
             const bubble = document.createElement("div");
             bubble.className = "text-bubble";
             bubble.innerText = randomMessage;
 
-            // Random position for the bubble
             const left = Math.random() * 80 + 10;
             const top = Math.random() * 80 + 10;
             bubble.style.left = left + "vw";
@@ -144,7 +140,6 @@
             const container = document.getElementById("bubbles-text");
             container.appendChild(bubble);
 
-            // Adjust position if the bubble goes out of bounds
             setTimeout(() => {
                 const rect = bubble.getBoundingClientRect();
 
